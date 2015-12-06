@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RotationController : MonoBehaviour
+public class MoveController : MonoBehaviour
 {
     public float speed = 15f;
     public float jumpForce = 10f;
