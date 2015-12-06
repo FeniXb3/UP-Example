@@ -207,67 +207,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 551111283}
   m_RootOrder: 2
---- !u!1 &249388124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 249388125}
-  - 50: {fileID: 249388127}
-  - 231: {fileID: 249388126}
-  m_Layer: 0
-  m_Name: Camera Holder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &249388125
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 249388124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2137614752}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!231 &249388126
-SpringJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 249388124}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1935093470}
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: 1
-  m_DampingRatio: .5
-  m_Frequency: 1
---- !u!50 &249388127
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 249388124}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &551111282
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412cb20c6a1863d4ba6db07a7cee30f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 25
   jumpForce: 10
 --- !u!212 &1935093468
 SpriteRenderer:
@@ -486,7 +425,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 5
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -590,7 +529,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 249388125}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &2137614753
 MonoBehaviour:
@@ -603,3 +542,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642d50e4df77a04428af0fabc906dc29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 2, z: -10}
+  objectToFollow: {fileID: 1935093466}
