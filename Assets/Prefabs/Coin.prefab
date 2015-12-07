@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
+  pointsTargetTransform: {fileID: 0}
 --- !u!212 &21225524
 SpriteRenderer:
   m_ObjectHideFlags: 1

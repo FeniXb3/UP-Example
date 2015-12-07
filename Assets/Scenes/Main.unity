@@ -135,6 +135,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 431492, guid: 2f9f2001b32bb484a87c0504989fe6b0, type: 2}
   m_PrefabInternal: {fileID: 6980420}
+--- !u!1 &171261249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 171261250}
+  m_Layer: 0
+  m_Name: Coins Target
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &171261250
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171261249}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2137614752}
+  m_RootOrder: 0
 --- !u!1 &201351560
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,6 +323,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11447264, guid: 2f9f2001b32bb484a87c0504989fe6b0, type: 2}
+      propertyPath: pointsTargetTransform
+      value: 
+      objectReference: {fileID: 171261250}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f9f2001b32bb484a87c0504989fe6b0, type: 2}
   m_IsPrefabParent: 0
@@ -1102,7 +1133,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 171261250}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &2137614753

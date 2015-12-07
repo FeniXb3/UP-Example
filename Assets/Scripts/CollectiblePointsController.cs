@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using DG.Tweening;
+using UnityEngine;
 
 public class CollectiblePointsController : MonoBehaviour
 {
@@ -6,22 +8,14 @@ public class CollectiblePointsController : MonoBehaviour
 
     private AudioSource audioSource;
     private PlayerPointsController playerPointsController;
-    private SpriteRenderer spriteRenderer;
+    private Transform pointsTargetTransform;
     private bool isCollected;
 
     void Start()
     {
         playerPointsController = GameObject.FindGameObjectWithTag("GameController").GetComponent<PlayerPointsController>();
         audioSource = gameObject.GetComponent<AudioSource>();
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-    }
-
-    void Update()
-    {
-        if(isCollected && !audioSource.isPlaying)
-        {
-            gameObject.SetActive(false);
-        }
+        pointsTargetTransform = GameObject.FindGameObjectWithTag("Finish").transform;
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -30,8 +24,13 @@ public class CollectiblePointsController : MonoBehaviour
         {
             audioSource.Play();
             playerPointsController.AddPoints(points);
-            spriteRenderer.enabled = false;
             isCollected = true;
+            transform.DOMove(pointsTargetTransform.position, 1f).SetEase(Ease.InOutSine).OnComplete(OnCollected);
         }
+    }
+
+    private void OnCollected()
+    {
+        gameObject.SetActive(false);
     }
 }
