@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 10
-  audioClip: {fileID: 8300000, guid: e777fe700378b6e49872209a963601bc, type: 3}
 --- !u!212 &21225524
 SpriteRenderer:
   m_ObjectHideFlags: 1
